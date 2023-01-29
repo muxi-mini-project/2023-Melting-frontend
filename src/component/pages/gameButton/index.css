@@ -1,0 +1,19 @@
+.gameButtonBox {
+    position: absolute;
+    width: 100vw;
+    bottom: 6vh;
+    display: flex;
+    justify-content: space-around;
+}
+.gameButton {
+    width: 34vw;
+    height: 10vw;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 10vw;
+    background-color: #fff;
+    z-index: 20;
+    box-shadow: 10px 10px 10px -8px rgba(0, 0, 0, .2);
+}
