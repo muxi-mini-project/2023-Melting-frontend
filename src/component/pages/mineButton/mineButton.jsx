@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { View } from '@tarojs/components'
-import Taro from '@tarojs/taro'
-import './index.css'
-import Alert from '../alertpage'
+import './mineButton.css'
+import Alert from '../alertpage/alertPage'
 
 export default function MineButton(props) {
   const [state, setstate] = useState(false)

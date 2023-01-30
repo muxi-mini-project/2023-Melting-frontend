@@ -1,15 +1,13 @@
 import React, {useEffect} from 'react'
 import { View, Image, Text } from '@tarojs/components'
-import './index.css'
-import Taro from '@tarojs/taro'
-import { useState } from 'react'
-import Swiper from '../swiper'
+import './games.css'
+
+import Swiper from '../swiper/swiper'
 
 export default function Games(props) {
   
-
-
   return (
+
     <>
     <Swiper>
       <View className='gameInfoBox' >
@@ -22,10 +20,7 @@ export default function Games(props) {
       </View>
     </Swiper>
     
-    </>
-    
-   
-    
+    </> 
 
   )
 }

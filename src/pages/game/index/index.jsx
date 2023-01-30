@@ -1,12 +1,14 @@
 import { View, Image, Text } from '@tarojs/components'
-import React, { useContext, useReducer }from 'react'
+import React, { useContext, useReducer, useEffect }from 'react'
 import Taro from '@tarojs/taro'
-import GameButton from '../../../component/pages/gameButton'
-import Games from '../../../component/pages/games'
-import Gameselect from '../../../component/pages/gameselect'
-import GameSelctItem from '../../../component/pages/gameselectitem'
-import Navbar from '../../../component/pages/navbarTop'
+import GameButton from '../../../component/pages/gameButton/gameButton'
+import Games from '../../../component/pages/games/games'
+import Gameselect from '../../../component/pages/gameselect/gameselect'
+import GameSelctItem from '../../../component/pages/gameselectitem/gameSelectItem'
+import Navbar from '../../../component/pages/navbarTop/navbarTop'
+import Request from '../../../component/pages/request/request'
 import './index.css'
+
 
 
 definePageConfig({
@@ -42,7 +44,7 @@ const globalContext = React.createContext()
 
 export default function index() {
   const [state, dispatch] = useReducer(reducer, initialState)
-  
+  Request('post','/project/games/find')
   return (
    <View>
           {/* 顶部导航栏 */}
@@ -91,20 +93,20 @@ export default function index() {
                   </Placechild>
 
                 </Gameselect>
+
+                
               </View>
 
+          
+          </globalContext.Provider>
+          
+          {/* 选项卡部分 */}
+          <globalContext.Provider value={{state}}>
+
+             <SwitchCard></SwitchCard>
 
           </globalContext.Provider>
           
-
-          {/* 选项卡部分 */}
-          <View className='ti'>{"项目安排"}</View>
-
-          <View id='selebox' onClick={()=>{
-            Taro.redirectTo({url:`/pages/game/details/details`})
-          }}>
-            <Games name = 'jdi' number ='6' time = '30' place = '1' class = 'dhwq' tools = 'null' rules = 'null'></Games>
-          </View>
 
           {/* 按钮部分 */}
           <GameButton text1 = '生成题卡文件' url1 = '/details/details' text2 = '完成' url2 = '/index/index'></GameButton>
@@ -120,7 +122,22 @@ export default function index() {
    </View>
   )
 }
+function SwitchCard() {
+  const {state} = useContext(globalContext)
+  console.log(state.list);
+  return (
+    <>
+        <View className='ti'>{"项目安排"}</View>
 
+            <View id='selebox' onClick={()=>{
+              
+              Taro.redirectTo({url:`/pages/game/details/details?place='${state.list[0]}'&time='${state.list[1]}'&number='${state.list[2]}`})
+            }}>
+              <Games name = 'jdi' number ='6' time = '30' place = '1' class = 'dhwq' tools = 'null' rules = 'null'></Games>
+        </View>
+    </>
+  )
+}
 
 
 function Placechild(props) {

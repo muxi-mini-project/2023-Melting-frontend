@@ -1,8 +1,8 @@
 import { View, Image } from '@tarojs/components'
 import './index.css'
 import React, { useEffect } from 'react'
-import ToolkitButton from '../../../component/pages/toolkitButton'
-import Navbar from '../../../component/pages/navbarTop'
+import ToolkitButton from '../../../component/pages/toolkitButton/toolkitButton'
+import Navbar from '../../../component/pages/navbarTop/navbarTop'
 
 definePageConfig({
   navigationBarTitleText: '工具箱',

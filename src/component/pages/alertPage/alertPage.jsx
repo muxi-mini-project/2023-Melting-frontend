@@ -1,6 +1,6 @@
 import React from 'react'
 import {View} from '@tarojs/components'
-import './index.css'
+import './alertPage.css'
 
 export default function Alert(props) {
   return (

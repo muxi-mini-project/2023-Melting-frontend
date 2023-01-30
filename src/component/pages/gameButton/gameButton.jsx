@@ -1,6 +1,6 @@
 import React from 'react'
-import { View, Image, Text } from '@tarojs/components'
-import './index.css'
+import { View } from '@tarojs/components'
+import './gameButton.css'
 import Taro from '@tarojs/taro'
 
 export default function GameButton(props) {

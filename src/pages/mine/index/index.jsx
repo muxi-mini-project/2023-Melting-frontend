@@ -1,7 +1,8 @@
 import { View, Image, Text } from '@tarojs/components'
 import React from 'react'
-import MineButton from '../../../component/pages/mineButton'
-import Navbar from '../../../component/pages/navbarTop'
+import MineButton from '../../../component/pages/mineButton/mineButton'
+import Navbar from '../../../component/pages/navbarTop/navbarTop'
+import Request from '../../../component/pages/request/request'
 import './index.css'
 
 definePageConfig({
@@ -9,6 +10,7 @@ definePageConfig({
 })
 
 export default function index() {
+  Request('get','http://116.204.121.9:65000/api/v1')
   return (
    <View>
         {/* 顶部导航栏 */}

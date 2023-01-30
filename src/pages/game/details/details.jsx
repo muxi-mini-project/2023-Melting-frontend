@@ -1,9 +1,10 @@
 import { View, Image } from '@tarojs/components'
 import React from 'react'
-import Alert from '../../../component/pages/alertpage'
-import GameButton from '../../../component/pages/gameButton'
-import Games from '../../../component/pages/games'
-import Navbar from '../../../component/pages/navbarTop'
+import {useLoad} from '@tarojs/taro'
+import Alert from '../../../component/pages/alertPage/alertPage'
+import GameButton from '../../../component/pages/gameButton/gameButton'
+import Games from '../../../component/pages/games/games'
+import Navbar from '../../../component/pages/navbarTop/navbarTop'
 import './details.css'
 
 
@@ -15,10 +16,16 @@ definePageConfig({
 
 
 export default function detail() {
+ 
+  useLoad((props) => {
+    
+    var {place, time, number} = props
+    console.log(place);
+  })
   return (
     <View >
 
-      {/* <Alert></Alert> */}
+      <Alert></Alert>
       {/* 导航栏 */}
       <Navbar src = "/game/title.png" color = '#f2e7b9' wid = '32vw' from = 'game'></Navbar>
 

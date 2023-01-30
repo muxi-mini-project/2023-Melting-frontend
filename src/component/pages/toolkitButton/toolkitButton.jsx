@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Image } from '@tarojs/components'
 import Taro from '@tarojs/taro'
-import './index.css'
+import './toolkitButton.css'
 
 export default function ToolkitButton(props) {
   console.log(props.src);

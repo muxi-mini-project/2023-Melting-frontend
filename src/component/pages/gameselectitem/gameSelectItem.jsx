@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {View} from '@tarojs/components'
-import './index.css'
+import './gameSelectItem.css'
 
 export default function GameSelctItem(props) {
   // const [state, setstate] = useState(initialState)
