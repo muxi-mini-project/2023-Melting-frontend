@@ -1,0 +1,178 @@
+.page{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../image/introduction/background.png);
+    background-size: cover;
+}
+.intoDetailbox{
+    width: 100vw;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+.textrow{
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    height: 26px;
+}
+.department{
+    font-size: 30px;
+    color:#fff;
+    padding-left: 100px;
+}
+.departmentInput{
+    display: inline-block;
+    outline-style: none ;
+    border-bottom:1px white dashed ;
+    padding-top: 5px;
+    text-align: center;
+}
+.Srollbox{
+    width: 605px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+.Srollposition1{
+    position: absolute;
+    top: 352px;
+    left: 88px;
+}
+.tagKindbox{
+    width: 100%;
+    height: 68px;
+    display: flex;
+    white-space: nowrap;
+}
+.tagKind{
+    display: inline-block;
+    width: 150px;
+    height: 48px;
+    padding-top: 20px;
+    font-size: 24px;
+    color: #000;
+    text-align:center;
+}
+.tag{
+    height: 40px;
+    border-radius: 15px;
+    display: inline-block;
+    font-size: 27px;
+    font-weight: 500;
+    padding-left: 15px;
+    padding-right:15px ;
+    margin: 10px;
+}
+.tagshowbox{
+    overflow: hidden;
+    height: 85%;
+}
+.tagTipBottom{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 25px;
+}
+.designseeable{
+    color: #fff;
+    position: absolute;
+    bottom: 20%;
+    font-size: 30px;
+    padding-left: 100px;
+}
+.btnleft{
+    width: 263px;
+    height: 115px;
+    position: absolute;
+    bottom: 7%;
+    left: 82px;
+}
+.btnright{
+    width: 263px;
+    height: 115px;
+    position: absolute;
+    bottom: 7%;
+    right: 55px;
+}
+.icetwo{
+    width: 623px;
+    height: 39px;
+    position: absolute;
+    left: 77px;
+    bottom:8% ;
+}
+.bottomlogo{
+    position: absolute;
+    bottom: 3%;
+    left: 314px;
+    width: 156px;
+    height: 46px;
+}
+.tagNumIput{
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    border-bottom:1px dashed #fff;
+}
+.topbox{
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+}
+.topbox1{
+    color:#fff;
+    text-align: center;
+    font-size: 40px;
+}
+.topbox2{
+    color:#fff;
+    text-align: center;
+    font-size: 25px;
+}
+.name{
+    padding-left: 30px;
+    width:350px;
+    display: inline-block;    
+    border-bottom: #fff dashed 1px;
+}
+.yourname{
+    text-align: center;
+    font-size: 35px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.titleSelected{
+    color: #fff;
+    font-size: 46px;
+    margin-left: 175px;
+}
+.selectedTagBox{
+    width: 452px;
+    height: 145px;
+    background: url('../../image/introduction/selectedBack.png');
+    background-size:cover;
+    margin-left: 165px;
+    margin-bottom: 50px;
+}
+.Srollposition2{
+    position: absolute;
+    left: 89px;
+}
+.btnBox{
+    width: 100vw;
+    height: 20vh;
+    position: absolute;
+    bottom: 1%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10000;
+}
+.btnBox>Image{
+    width: 263px;
+    height: 105px;
+
+}

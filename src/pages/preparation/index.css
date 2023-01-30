@@ -1,0 +1,48 @@
+.page{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(114,143,185,0.9) 0%, rgba(91,114,148,0.8) 64%, rgba(57,72,93,0.9) 100%);
+}
+.introduction{
+    position: absolute;
+    top: 13vh;
+    left: 67px;
+    font-size: 56px;
+    font-family: ShouShuti-Regular, ShouShuti;
+    font-weight: 400;
+    color: #F5EEEE;
+}
+.container{
+    position: absolute;
+    top:17vh;
+    left:138px;
+    width: 496px;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.choice{
+    width: 450px;
+    padding-top: 55px;
+    height: 108px;
+    font-size: 40px;
+    text-align: center;
+    background: #F5EEEE;
+    box-shadow: 0px 5px 11px 2px rgba(0,0,0,0.16);
+    border-radius: 28px 28px 28px 28px;
+    opacity: 1;
+    border: 2px solid #728FB9;
+}
+Button{
+    width: 263px;
+    height: 84px;
+    background: #86C4E3;
+    color: white;
+    border-radius: 35px 35px 35px 35px;
+    opacity: 1;
+    border: 2px solid #728FB9;
+    position: absolute;
+    bottom: 20vh;
+    left: 244px;
+}

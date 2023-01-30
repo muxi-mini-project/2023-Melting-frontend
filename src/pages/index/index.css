@@ -1,0 +1,78 @@
+.index{
+    width: 100vw;
+    height: 100vh;
+    background: #A8B5E5;
+    position: relative;
+}
+.topTittle{
+    position: absolute;
+    top: 56px;
+    left: 32px;
+    width: 254px;
+    height: 42px;
+    font-size: 42px;
+    font-family: SimHei-Regular, SimHei;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+.box{
+    position: absolute;
+    top: 668px;
+    left: 65px;
+    display: flex;
+    flex-direction: column;
+    width: 620px;
+}
+.clickStart{
+    width: 620px;
+    font-size: 77px;
+    font-family: ShouShuti-Regular, ShouShuti;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+}
+.producer{
+    width: 308px;
+    height: 39px;
+    font-size: 39px;
+    font-family: ShouShuti-Regular, ShouShuti;
+    font-weight: 400;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 42px;
+    left: 221px;
+}
+.ice_start{
+    position: absolute;
+    top: 682px;
+    left: 168px;
+    width: 418px;
+    height: 37px;
+}
+.container{
+    position: absolute;
+    top:17vh;
+    left:128px;
+    width: 496px;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.choice{
+    width: 496px;
+    height: 150px;
+    position: relative;
+    padding-top: 90px;
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: 4px 5px 11px 2px rgba(0,0,0,0.16);
+    border-radius: 70px 70px 70px 70px;
+}
+.choice>Image{
+    width: 77px;
+    height: 53px;
+    position: absolute;
+    bottom: 0;
+    right: -15px;
+}
