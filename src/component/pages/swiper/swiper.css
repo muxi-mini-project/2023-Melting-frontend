@@ -1,0 +1,50 @@
+.playbox {
+    margin: 10px 10px;
+}
+.historyItem {
+  /* width: 100%; */
+  height: 20vh;
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+  width: 81.2vw;
+    border-radius: 30px;
+    background-color: red;
+    font-family: 'Arial','Microsoft YaHei',sans-serif;
+    margin: 0 auto;
+    margin-top: 3.3vw;
+    box-shadow: 10px 10px 10px -8px rgba(0, 0, 0, .2);
+    z-index: 1;
+}
+ 
+.historyItem .itemDelete {
+  width: 100%;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  background: red;
+  /* z-index: 20; */
+}
+ 
+.historyItem .right {
+  float: right;
+}
+ .text {
+   position: absolute;
+   right: 20px;
+   top:50%;
+   transform: translateY(-50%);
+    color: #fff;
+    text-align: center;
+    z-index: 200;
+ }
+.historyItem .itemCover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+  /* width: 100%; */
+  /* height: 50px; */
+  background: white;
+  border: 1px solid white;
+}

@@ -1,0 +1,16 @@
+#back {
+    position: absolute;
+    top: 10vh;
+    height: 90vh;
+    width: 100vw;
+    background-image: linear-gradient(#b3d5f1,#92aec4);
+    /* display: flex;
+    justify-content: center; */
+}
+#backimg {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 24vh;
+    opacity: .6;
+}

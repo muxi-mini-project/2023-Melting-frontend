@@ -1,0 +1,21 @@
+.swipercon {
+    height: 80vh;
+    overflow: auto;
+}
+.gameimage {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 26vh;
+    z-index: 2;
+}
+.bg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f2e7bb;
+    /* opacity: .6; */
+    z-index: -1;
+}

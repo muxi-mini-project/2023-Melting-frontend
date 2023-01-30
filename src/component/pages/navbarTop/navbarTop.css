@@ -1,0 +1,14 @@
+
+
+
+.nav {
+    height: 10vh;
+    text-align: center;
+    overflow: hidden;
+    /* font-family: 'ShouShuti'; */
+}
+
+#title {	
+    position: absolute;
+    left: 6.2vw;
+}
