@@ -19,9 +19,12 @@ export default function detail() {
  
   useLoad((props) => {
     
-    var {place, time, number} = props
-    console.log(place);
+    var {list} = props
+    console.log(list);
+    const lists = list.split(',')
+    console.log(lists);
   })
+
   return (
     <View >
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import { useEffect } from 'react'
 import Taro from '@tarojs/taro'
 import { useState } from 'react'
 
@@ -8,7 +7,7 @@ export default function Request(method,url,Token,body) {
   
   const [token, settoken] = useState(Token)
   console.log(Token);
-  let gameList = []
+  let dataList = []
     if(!Token && (url !== '/login')) {
       console.log('login first');
     } else {
@@ -26,16 +25,14 @@ export default function Request(method,url,Token,body) {
            if(url === '/login') {
             settoken(res.data.data.Token)
            } else {
-            console.log(res.data.data);
-            gameList = [...res.data.data]
+            console.log('返回数据：',res.data.data);
+            dataList = [...res.data.data]
            }
            
            
           }
         })
     }
-  if(url === '/login') 
-    return token
-  else 
-    return gameList
+  
+  return (url === '/login')?token:dataList
 }

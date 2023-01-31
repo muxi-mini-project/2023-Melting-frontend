@@ -9,7 +9,7 @@ import Request from '../../../api/request/request'
 import './index.css'
 import { createContext } from 'react'
 import GameSelctItem from '../../../component/pages/gameselectitem/gameSelectItem'
-import { useState } from 'react'
+
 
 
 definePageConfig({
@@ -59,7 +59,8 @@ export default function index() {
     'time':`${timeList[state.list[1]]}`,
     "venue": `${placeList[state.list[0]]}`,
   })
-  console.log(gameList);
+  let mockList = ['2','5','10']
+  // console.log(gameList);
   // console.log('crowd',crowdList[state.list[2]]);
   return (
    <View>
@@ -93,11 +94,21 @@ export default function index() {
           </globalContext.Provider>
           
           {/* 选项卡部分 */}
-          <globalContext.Provider value={{state}}>
-            
-             <SwitchCard></SwitchCard>
+          <View className='ti'>{"项目安排"}</View>
 
-          </globalContext.Provider>
+            <View id='selebox' onClick={()=>{
+              
+              Taro.redirectTo({url:`/pages/game/details/details?list=${mockList}`})
+            }}>
+              <Games></Games>
+              {gameList.map((item,index)=>{
+                return (
+                  <Games></Games>
+                )
+              })}
+              
+          </View>
+          
           
 
           {/* 按钮部分 */}
@@ -115,22 +126,7 @@ export default function index() {
   )
 }
 
-export function SwitchCard() {
-  const {state} = useContext(globalContext)
-  // console.log(state.list);
-  return (
-    <>
-        <View className='ti'>{"项目安排"}</View>
 
-            <View id='selebox' onClick={()=>{
-              
-              Taro.redirectTo({url:`/pages/game/details/details?place='${state.list[0]}'&time='${state.list[1]}'&number='${state.list[2]}`})
-            }}>
-              <Games name = 'jdi' number ='6' time = '30' place = '1' class = 'dhwq' tools = 'null' rules = 'null' clickable = {false}></Games>
-        </View>
-    </>
-  )
-}
 export function Placechild(props) {
   const {dispatch} = useContext(globalContext)
   const {state} = useContext(globalContext)
