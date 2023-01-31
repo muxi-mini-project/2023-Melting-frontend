@@ -1,14 +1,9 @@
 import { Component } from 'react'
-import './app.scss'
+import './app.css'
+import Taro from '@tarojs/taro'
 
 class App extends Component {
-
-  componentDidMount () {}
-
-  componentDidShow () {}
-
-  componentDidHide () {}
-
+  
   render () {
     // this.props.children 是将要会渲染的页面
     return this.props.children
