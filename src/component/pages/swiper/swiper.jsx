@@ -81,34 +81,42 @@ export default function Swiper(props) {
     }
   }
  
-  
+  const handleClick = () => {
+   
+      setState(previousState => {
+        return { ...previousState, show:false, }
+    })
+   
+
+  }
   
  
   
     return (
         <View style={state.show?{display:'block'}:{display:'none'}} className='playbox'>
-            <ScrollView className='history' scrollY>
+            <View className='history' >
                 
-                <View className='historyItem' onClick={()=>{
-                        setState(previousState => {
-                            return { ...previousState, show:false, }
-                        })
-                    }}>
-                <View className='text'>删除</View>
-                    {/* 删除 */}
-                    <View className='itemDelete right' ></View>
-            
+                <View className='historyItem' >
+                      
+                      <View className='text' onClick={()=>{
+                           handleClick()
+                    }}>删除</View>
+                      
+                    
+                        {/* 删除 */}
+                        <View className='itemDelete right'></View>
+            {/* {props.children} */}
                     {/* 遮盖层 */}
                     <View
-                        className='itemCover'
+                        // className='itemCover'
                         onTouchStart={touchstart}
                         onTouchEnd={touchmove}
-                        animation={state.animation}
+                        animation={props.moveable?state.animation:''}
                     >
                         {props.children}
                     </View>
                 </View>
-            </ScrollView>
+            </View>
         </View>
       
     )

@@ -21,7 +21,6 @@ export default defineAppConfig({
     'pages/game/index/index',
     'pages/game/details/details',
 
-
   ],
   window: {
     backgroundTextStyle: 'light',

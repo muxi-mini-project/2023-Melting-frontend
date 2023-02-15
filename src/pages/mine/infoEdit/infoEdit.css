@@ -1,0 +1,68 @@
+.info-background {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+.info-backhover {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #cccce2;
+    opacity: .6;
+    z-index: -1;
+}
+.info-backcover {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+.info-edit-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8.6vh;
+    height: 8.6vh;
+    /* border-radius: 50%; */
+    overflow: hidden;
+    /* background-color: #fff; */
+    /* margin:1vw; */
+}
+.info-edit-box {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50vw;
+    margin-top: 5vh;
+}
+.info-change-nickname {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 10px -8px rgba(0, 0, 0, .2);
+    width: 35.2vw;
+    height: 14vw;
+    margin-bottom: 2vh;
+}
+.info-change-image {
+    position: relative;
+    border-radius: 40px;
+    width: 8.5vh;
+    height: 8.5vh;
+    /* border: 2px solid white; */
+    box-shadow: 10px 10px 10px -8px rgba(0, 0, 0, .2);
+    overflow: hidden;
+    margin-bottom: 2vh;
+}
+.info-edit-tip {
+    position: absolute;
+    bottom: -20px;
+    font-size: 20px;
+}
+.error {
+    color: red;
+}

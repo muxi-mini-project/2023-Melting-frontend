@@ -1,22 +1,29 @@
 import React, {useEffect} from 'react'
+
+import { useState } from 'react'
+
 import { View, Image, Text } from '@tarojs/components'
-import './games.css'
 
 import Swiper from '../swiper/swiper'
-import { useState } from 'react'
+
 import Taro from '@tarojs/taro'
+
+import './games.css'
+
+import Alert from '../alertPage/alertPage'
 
 export default function Games(props) {
   const [click, setClick] = useState(props.clickable)
+  const [isshow, setisshow] = useState(false)
   return (
 
     <>
-    <Swiper>
+    <Swiper moveable = {click}>
       <View className='gameInfoBox' onClick={()=>{
         if(click) {
-          Taro.redirectTo({url:`/pages/game/index/index`})
+          // Taro.redirectTo({url:`/component/pages/alertPage/alertPage?name=${props.name}`})
+          setisshow(!isshow)
         }
-        
       }}>
           <View className='checked'></View>
           <View className='gameName'>{props.name}</View>
@@ -24,9 +31,11 @@ export default function Games(props) {
           <View className='gameInfo'>分类：{props.class}</View>
           <View className='gameInfo'>道具：{props.tools}</View>
           <View className='gameInfo'>游戏规则： {props.rules}</View>
+          
+          {/* <Alert type ={1}></Alert> */}
       </View>
     </Swiper>
-    
+    {click?<Alert isshow={isshow} type={props.name}></Alert>:''}
     </> 
 
   )

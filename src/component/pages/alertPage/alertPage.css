@@ -5,8 +5,38 @@
     top: 0;
     left: 0;
     background-color: gray;
-    opacity: .6;
+    animation: appear .4s ease-in-out forwards;
     z-index: 40;
+}
+@keyframes appear {
+    0% {
+        scale: 0;
+        opacity: 0;
+    }
+    100% {
+        scale: 1;
+        opacity: .6;
+    }
+}
+@keyframes appear2 {
+    0% {
+        scale: 0;
+        opacity: 0;
+    }
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}
+@keyframes disappear {
+    0% {
+        scale: 1;
+        opacity: .6;
+    }
+    100% {
+        scale: 0;
+        opacity: 0;
+    }
 }
 .alertitem {
     position: absolute;
@@ -19,16 +49,66 @@
     border-radius: 40px;
     z-index: 41;
     opacity: 1;
+    animation: appear2 .4s ease-in-out forwards;
 }
-.show {
+.alertshow {
     display: block;
     color: black;
 }
-.noshow {
+.alertnoshow {
+    /* animation: disappear .4s ease-in-out forwards; */
     display: none;
 }
-.pagetext {
+.alertpagetext {
     margin-left: 8vw;
     margin-top: 2vh;
     font-size: 36px;
+}
+.alertButton {
+    background-color: red;
+    width: 40%;
+    height: 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.gameselectimg {
+    width: 4vw;
+    height: 3.2vw;
+}
+.gameselectbox {
+    font-size: 4vw;
+    width: 20.8vw;
+    position: relative;
+}
+.boxofchildren {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+}
+.boxofchildrenalt {
+    visibility: hidden;
+}
+.headtit {
+  display: flex;
+  justify-content: center;
+}
+.gameselectitem {
+    display: flex;
+    width: 20.8vw;
+    height: 4vw;
+    border-radius: 1vw;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.6vw;
+}
+.custom {
+    background-color: orange;
+   
+}
+.alter {
+    background-color: white;
+   
 }

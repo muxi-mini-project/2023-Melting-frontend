@@ -8,7 +8,7 @@ import GameSelctItem from '../gameselectitem/gameSelectItem'
 import { Placechild } from '../../../pages/game/index'
 
 export default function Gameselect(props) {
-  const [states, setstates] = useState(true)
+  const [states, setstates] = useState(false)
   // const {state} = useContext(globalContext)
   // console.log(state);
   return (

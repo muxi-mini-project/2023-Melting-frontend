@@ -10,7 +10,8 @@ export default function Navbar(props)  {
         return (
             
             <View className='nav' style={{backgroundColor:props.color} } onClick = {()=>{
-                Taro.redirectTo({url:`/pages/${props.from}/index/index`})
+                // Taro.navigateTo({url:`/pages/${props.from}/index/index`})
+                Taro.navigateBack()
             }}>
                 <Image src={require(`../../../image${props.src}`)} id='title' style={{postion:"absolute",top:`${loc+4}px`,width:`${props.wid}`,height:`24px`}}></Image>
 
