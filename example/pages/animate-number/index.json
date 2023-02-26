@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "数字滚动特效",
+  "usingComponents": {
+    "sol-animate-number": "/dist/animate-number/index"
+  }
+}

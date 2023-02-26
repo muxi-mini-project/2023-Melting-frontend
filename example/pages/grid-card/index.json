@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "九宫格翻牌",
+    "usingComponents": {
+        "sol-grid-card": "/dist/grid-card/index"
+    }
+}

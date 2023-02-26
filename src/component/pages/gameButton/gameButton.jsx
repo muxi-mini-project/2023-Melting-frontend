@@ -8,12 +8,12 @@ export default function GameButton(props) {
         <View className='gameButtonBox'>
             <View className='gameButton' onTap={()=>{
 
-                Taro.redirectTo({url:`/pages/game${props.url1}`})
+                Taro.navigateTo({url:`/pages/game${props.url1}`})
                 
             }}>{props.text1}</View>
             <View className='gameButton' onTap={()=>{
                 
-                Taro.redirectTo({url:`/pages/game${props.url2}`})
+                Taro.navigateTo({url:`/pages/game${props.url2}`})
                 
             }}>{props.text2}</View>
         </View>

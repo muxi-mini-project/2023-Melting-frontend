@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="grid-card">
+   <sol-grid-card id="sol-grid-card"   card="{{card}}"  bind:open="openCard"></sol-grid-card>
+</view>
+<view>
+   <view class="sol-button"  bindtap="start">
+      开始抽奖
+    </view>
+</view>
+</view>

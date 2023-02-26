@@ -1,12 +1,13 @@
 export default defineAppConfig({
   pages: [
+    'pages/index',
     // 工具箱 界面
-    // 'pages/toolkit/index/index',
-    // 'pages/toolkit/fingerTop/fingerTop',
-    // 'pages/toolkit/dice/dice',
-    // 'pages/toolkit/random/random',
-    // 'pages/toolkit/plate/plate',
-    // 'pages/toolkit/cardTurn/cardTurn',
+    'pages/toolkit/index/index',
+    'pages/toolkit/fingerTop/fingerTop',
+    'pages/toolkit/dice/dice',
+    'pages/toolkit/random/random',
+    'pages/toolkit/plate/plate',
+    'pages/toolkit/cardTurn/cardTurn',
 
 
 
@@ -18,9 +19,11 @@ export default defineAppConfig({
 
 
     // 游戏 界面
-    // 'pages/game/index/index',
-    // 'pages/game/details/details',
-
+    
+    'pages/game/index/index',
+    'pages/game/details/details',
+    'pages/game/gameCard/gameCard',
+    
 
   ],
   window: {

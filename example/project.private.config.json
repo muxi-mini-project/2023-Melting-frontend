@@ -1,0 +1,126 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "wheel",
+          "pathName": "pages/wheel/index",
+          "query": ""
+        },
+        {
+          "id": 1,
+          "name": "红包雨",
+          "pathName": "pages/packet-rain/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 2,
+          "name": "pages/grid-card/index",
+          "pathName": "pages/grid-card/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "下载图片",
+          "pathName": "pages/saveImgs/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "拖拽",
+          "pathName": "pages/touchMove/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/tabScroller/index",
+          "pathName": "pages/tabScroller/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/slot-machine/index",
+          "pathName": "pages/slot-machine/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "分享",
+          "pathName": "pages/share-sheet/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/float-icon/index",
+          "pathName": "pages/float-icon/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/demo/index",
+          "pathName": "pages/demo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/demo/",
+          "pathName": "pages/demo/painter/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 11,
+          "name": "pages/demo/painter/index",
+          "pathName": "pages/demo/painter/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/index/index",
+          "pathName": "pages/demo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/animate-number/index",
+          "pathName": "pages/animate-number/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/animate-number/index",
+          "pathName": "pages/animate-number/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/grid-card/index",
+          "pathName": "pages/grid-card/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.randombox-item {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 10vh;
+    font-size: 8vh;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .span {
+    height: 10vh;
+    margin: auto;
+}

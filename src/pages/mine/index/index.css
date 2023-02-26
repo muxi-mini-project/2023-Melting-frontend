@@ -1,9 +1,22 @@
 .background {
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    
+    filter: blur(10px);
+    overflow: hidden;
+}
+.backblur {
+    /* filter: blur(30px); */
+    animation: blur .4s ease-in-out forwards;
+}
+@keyframes blur {
+    0% {
+        filter: blur(10px);
+    }
+    100% {
+        filter: blur(0);
+    }
 }
 .backover {
     width: 100vw;
@@ -30,11 +43,12 @@
 }
 #infoBox image {
     width: 8.6vh;
-    height: 8.6vh;
+    height:8.6vh;
     border-radius: 50%;
     overflow: hidden;
-    background-color: #fff;
+    /* background-color: #fff; */
     margin-left: 8.6vw;
+    /* filter: blur(6px); */
 }
 #textBox {
     display: flex;
@@ -86,4 +100,8 @@
     opacity: .7;
     transform: translateX(-50%);
     z-index: 20;
+}
+.info-bottom {
+    position: absolute;
+    bottom: 15vh;
 }
