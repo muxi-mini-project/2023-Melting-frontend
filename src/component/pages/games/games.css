@@ -1,0 +1,40 @@
+.gameInfoBox {
+    width: 81.2vw;
+    border-radius: 30px;
+    background-color: #fff;
+    font-family: 'Arial','Microsoft YaHei',sans-serif;
+    margin: 0 auto;
+    margin-top: 1.3vw;
+    box-shadow: 10px 10px 10px -8px rgba(0, 0, 0, .2);
+    z-index: 200;
+    min-height: 12.2vh;
+}
+.gameName {
+    font-size: 33px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.gameInfo {
+    font-size: 3.4vw;
+    margin-left: 20px;
+    word-break:normal;
+    word-wrap:break-word;
+        
+}
+.game-check {
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    top: -8vw;
+    left: -6vw;
+}
+.checked {
+    position: absolute;
+   top: 10px;
+   right: 10px;
+    width: 7vw;
+    height: 7vw;
+	background-image: url('../../../image/game/circle.png');
+	background-repeat: no-repeat;
+	background-position: center left;
+}

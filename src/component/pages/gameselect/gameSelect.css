@@ -1,0 +1,79 @@
+.gameselectimg {
+    width: 4vw;
+    height: 3.2vw;
+    /* animation: rotate 1s ease-in-out infinite; */
+}
+.gameselectbox {
+    font-size: 4vw;
+    width: 20.8vw;
+    position: relative;
+}
+
+.boxofchildren {
+    display: flex;
+    flex-direction: column;
+
+}
+.boxofchildrenalt {
+    display: flex;
+    flex-direction: column;
+}
+.headtit {
+  display: flex;
+  justify-content: center;
+}
+.noalt {
+    animation: select-item .4s ease-in-out forwards;
+}
+.alt {
+    animation: select-item-alt .6s ease-in-out forwards;
+}
+.select-didshow {
+    /* transform: rotate(90deg); */
+    animation: rotate .4s ease-in-out forwards;
+}
+.select-noshow {
+    animation: rotate2 .4s ease-in-out forwards;
+}
+@keyframes rotate {
+    0%{
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 90deg;
+    }
+}
+@keyframes rotate2 {
+    0%{
+        rotate: 90deg;
+    }
+    100% {
+        rotate: 0deg;
+    }
+}
+@keyframes select-item {
+    0% {
+       opacity: 0;
+       transform: translateY(-400px);
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes select-item-alt {
+    0% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-400px);
+    }
+}

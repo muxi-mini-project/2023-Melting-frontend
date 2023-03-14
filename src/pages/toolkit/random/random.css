@@ -1,0 +1,70 @@
+.random-select {
+  width: 36vw;
+  height: 10vw;
+}
+.random-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 10vw;
+}
+.random-line {
+  height: 10px;
+  width: 10vw;
+  position: absolute;
+  /* margin-top:5vh; */
+  top: 40%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.big-rec {
+  width: 84.8vw;
+  height: 84.8vw;
+  position: absolute;
+  top:40%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.create-button {
+  width: 45vw;
+  height: 11vw;
+  position: absolute;
+  bottom: 24vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.randombox-item {
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 24vw;
+    font-size: 22vw;
+    text-align: center;
+    /* position: relative; */
+    overflow: hidden;
+  }
+  .span {
+    height: 24vw;
+    width: 30vh;
+    margin: auto;
+}
+#random-back {
+  position: absolute;
+  top: 10vh;
+  height: 90vh;
+  width: 100vw;
+  background-image: linear-gradient(#b3d5f1,#92aec4);
+  /* display: flex;
+  justify-content: center; */
+}
+#random-backimg {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 24vh;
+  opacity: .6;
+}

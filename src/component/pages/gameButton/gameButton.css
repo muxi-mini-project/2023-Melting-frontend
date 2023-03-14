@@ -1,0 +1,93 @@
+.gameButtonBox {
+    position: absolute;
+    width: 100vw;
+    bottom: 6vh;
+    display: flex;
+    justify-content: space-around;
+}
+.gameButton {
+    width: 33vw;
+    height: 9vw;
+    border-radius: 10px;
+    font-size: 4vw;
+    font-weight: bold;
+    text-align: center;
+    line-height: 9vw;
+    background-color: #fff;
+    z-index: 24;
+    box-shadow: 10px 10px 10px -8px rgba(0, 0, 0, .2);
+}
+.gameeditpage {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: gray;
+    opacity: .6;
+    z-index: 40;
+}
+.gameedititem {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    width:91vw;
+    height:56vh;
+    border-radius: 40px;
+    z-index: 41;
+    opacity: 1;
+    overflow: auto;
+}
+.gameeditbutton {
+    position: fixed;
+    top:  4.5vw;
+    right: 4.5vw;
+    width: 60px;
+    height: 60px;
+    z-index: 2000;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background: url('../../../image/mine/click.png');
+    background-size: 60px 60px;
+}
+.gameeditbox {
+    margin-left: 11.3vw;
+    margin-top: 7.3vw;
+}
+.game-title-input {
+    font-size: 4.6vw;
+    height: 4.8vw;
+}
+.game-index {
+    margin-top: 4vw;
+    font-size: 4.375vw;
+    font-weight: bold;
+    display: flex;
+}
+.game-input {
+    font-size: 4.375vw;
+    font-weight: normal;
+    display: inline-block;
+    /* height: 4.8vw; */
+    width: 20vw;
+}
+.game-big-index {
+    margin-top: 4vw;
+    font-size: 4.375vw;
+    font-weight: bold;
+}
+.game-input-big {
+    width: 70vw;
+    height: 27.5vw;
+    border: 1px solid transparent;
+    background: linear-gradient(white,white) padding-box,
+    repeating-linear-gradient(-45deg,#ccc 0, #ccc 0.5em,white 0,white 0.75em);
+}
+.game-input-placeholder {
+    color: #ada399;
+    font-weight: normal;
+}

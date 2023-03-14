@@ -1,22 +1,28 @@
 .page{
     width: 100vw;
-    height: 100vh;
+    height: 93vh;
+    padding-top: 7vh;
     background-image: url(../../image/introduction/background.png);
     background-size: cover;
+}
+.srollper{
+    width: 100vw;
+    height: 72vh;
+
 }
 .intoDetailbox{
     width: 100vw;
     position: absolute;
-    top: 10%;
+    top: 13%;
     left: 0;
     display: flex;
     flex-direction: column;
 }
 .textrow{
     text-align: center;
-    font-size: 25px;
+    font-size: 27px;
     color: #fff;
-    height: 26px;
+
 }
 .department{
     font-size: 30px;
@@ -37,7 +43,7 @@
 }
 .Srollposition1{
     position: absolute;
-    top: 352px;
+    top:31vh;
     left: 88px;
 }
 .tagKindbox{
@@ -50,7 +56,7 @@
     display: inline-block;
     width: 150px;
     height: 48px;
-    padding-top: 20px;
+    padding-top: 17px;
     font-size: 24px;
     color: #000;
     text-align:center;
@@ -64,6 +70,7 @@
     padding-left: 15px;
     padding-right:15px ;
     margin: 10px;
+    background-color: #D3D3D3;
 }
 .tagshowbox{
     overflow: hidden;
@@ -142,6 +149,7 @@
     font-size: 35px;
     color: #fff;
     margin-bottom: 30px;
+    padding-top: 50px;
 }
 .titleSelected{
     color: #fff;
@@ -149,12 +157,13 @@
     margin-left: 175px;
 }
 .selectedTagBox{
-    width: 452px;
-    height: 145px;
-    background: url('../../image/introduction/selectedBack.png');
-    background-size:cover;
-    margin-left: 165px;
+    width: 450px;
+    height: 150px;
+    padding: 10px;
+    background-color: #fff;
+    border: skyblue dashed 7px;
     margin-bottom: 50px;
+    margin-left: 50px;
 }
 .Srollposition2{
     position: absolute;
@@ -162,17 +171,95 @@
 }
 .btnBox{
     width: 100vw;
-    height: 20vh;
+    height: 15vh;
     position: absolute;
-    bottom: 1%;
+    bottom: 0;
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     z-index: 10000;
+}
+.othersBox{
+    margin-left: 28px;
+    margin-top: 10px;
 }
 .btnBox>Image{
     width: 263px;
     height: 105px;
 
+}
+.personbox{
+    width: 671px;
+    height: 230px;
+    background: #FFFFFF;
+    border-radius: 70px 100px 140px 39px;
+    opacity: 0.7;
+    border: 5px dashed #7DB3E2;
+    display: flex;
+    margin-top: 10px;
+}
+.personbox Image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+.line{
+    width: 3px;
+    height: 179px;
+    opacity: 1;
+    background-color: #7DB3E2;
+    margin-top: 20px;
+}
+.name_description{
+    font-size: 20px;
+    width: 150px;
+    text-align: center;
+}
+.Tags_box_per_big{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.border{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 50px;
+}
+.joininnum{
+    font-family: ShouShuti-Regular, ShouShuti;
+    font-weight: 400;
+    color: #F9F9F9;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+}
+.wordcloudbtn{
+    width: 250px;
+    margin-bottom: 30px;
+}
+.wordcloudbox{
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.item{
+    display:inline-flex;
+    justify-content:center;
+}
+.refresh{
+    text-decoration: underline;
+    margin-left: 20px;
 }

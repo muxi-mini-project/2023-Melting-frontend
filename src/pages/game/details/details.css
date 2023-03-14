@@ -1,0 +1,15 @@
+.swipercon {
+    height: 70vh;
+    overflow: auto;
+}
+
+.bg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #BCDEFF;
+    /* opacity: .6; */
+    z-index: -1;
+}

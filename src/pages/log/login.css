@@ -1,0 +1,70 @@
+
+.login-big-box {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    z-index: 99;
+}
+.loginBox {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 75.7vw;
+    height: 55.7vw;
+    z-index: 100;
+    background-color: white;
+    border-radius: 80px;
+    /* box-shadow: 20px 16px 20px 20px rgba(0, 0, 0, .5); */
+}
+.hoverPage {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 99;
+    /* filter: blur(40px); */
+}
+.hoverPageShow {
+    animation: show 2s ease-in-out 300 forwards;
+}
+@keyframes show {
+    0% {
+        opacity: 1;
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 0;
+        filter: blur(0px);
+    }
+}
+.poptext {
+    margin-top: 4.6vh;
+    font-size: 3vh;
+    font-weight: bold;
+}
+.popalert {
+    margin-top: 2vh;
+    font-size: 2vh;
+    color: #d0d0d0;
+}
+.popbutton {
+    display: flex;
+    margin-bottom: 4vh;
+    
+}
+#popauthorize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none !important;
+    outline: none !important;
+    color: #8796bc;
+    margin-top: 5vh;
+    background-color: transparent !important;
+}

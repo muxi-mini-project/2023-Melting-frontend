@@ -1,7 +1,11 @@
-.page{
+.planpage{
     width: 100vw;
     height: 100vh;
     background: linear-gradient(180deg, rgba(217,223,253,0.91) 0%, rgba(203,209,237,0.41) 84%, rgba(109,112,127,0.91) 100%)
+}
+
+.mainbox{
+    padding-top: 20px;
 }
 .infoTextBox{
     width: 100vw;
@@ -44,6 +48,7 @@
     overflow: visible;
     outline-style: none ;
     border-bottom:1px solid #707070 ;
+    text-align: center;
 }
 Button{
     display: inline;
@@ -93,4 +98,63 @@ Button{
     top: 8vh;
     display: flex;
     flex-direction: column;
+}
+
+.modelsroll{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 10px;
+
+}
+.infomodel{
+    width: 202px;
+    height: 300px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 11px 2px rgba(0,0,0,0.16);
+    border-radius: 28px 28px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.modeltitle{
+    font-size: 30px;
+}
+.modeltip{
+    font-size: 23px;
+}
+.budgetbox{
+    padding-top: 20px;
+}
+.bugetadd{
+    padding-left: 50px;
+}
+.bugetkindbox{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+.budgetkind>Input{
+    display:inline-block;
+    width: 170px;
+    margin-left: 20px;  
+    margin-right: 30px;  
+    border-bottom: #4B4B4B 1px solid;
+    text-align: center;
+}
+.budgetkind{
+    font-weight: 300;
+    font-size: 28px;
+}
+.infotext Text{
+    text-decoration: underline;
+}
+.felxwrap{
+    display: flex;
+    flex-direction: column;
+}
+.backicon{
+    width: 300px;
 }

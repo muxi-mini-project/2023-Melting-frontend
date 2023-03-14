@@ -1,0 +1,60 @@
+.gamebackground {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    filter: blur(10px);
+}
+.backblur {
+    /* filter: blur(30px); */
+    animation: blur .4s ease-in-out forwards;
+}
+@keyframes blur {
+    0% {
+        filter: blur(10px);
+    }
+    100% {
+        filter: blur(0);
+    }
+}
+.gamebackover {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #BCDEFF;
+    /* opacity: .6; */
+    z-index: -1;
+}
+.gameimage {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 22vh;
+    /* opacity: .5; */
+    z-index: 23;
+}
+#filt {
+    margin-top: 4.1vw;
+    display: flex;
+    justify-content: space-around;
+}
+.ti {
+    margin-top: 1.3vw;
+    font-size: 4.6vw;
+    margin-left: 6.2vw;
+}
+#selebox {
+    height: 55.5vh;
+    overflow: auto;
+}
+.click {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    z-index: 5;
+    position: absolute;
+    top: 400px;
+    left: 200px;
+}
