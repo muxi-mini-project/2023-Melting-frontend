@@ -27,7 +27,7 @@ export default function planingStep(){
         }
         return {
           title: '自定义转发标题',
-          path: `/page/mine/plans/plans?id=1004`
+          path:typeof project=='undefined'?'/pages/index/index': `/page/mine/plans/plans?id=${project}`
         }
       })
     function showsucess(){

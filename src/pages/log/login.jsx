@@ -25,7 +25,7 @@ export default function Login() {
     let auth = userInfo[1]?userInfo[1].split('/')[userInfo[1].split('/').length-2].slice(-9):''
     nickName = (nickName.length > 7)?nickName.slice(-5):nickName
     Taro.setStorageSync('auth',auth)
-    Taro.setStorageSync('nickName',nickName)
+    Taro.setStorageSync('nickName2',nickName)
     console.log('info',userInfo[1])
     Request('post','/login','',{
         'nick_name':nickName,

@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import {RichText, View} from '@tarojs/components'
+import {RichText, View, Image, Button} from '@tarojs/components'
 import Request from '../../../api/request/Request'
 import Taro, { useLoad } from '@tarojs/taro'
 import Navbar from '../../../component/pages/navbarTop/navbarTop'
 import './gameCard.css'
+import './gameCard.css'
+import '../details/details.css'
 
 definePageConfig({
   navigationStyle:"custom",
@@ -58,32 +60,61 @@ export default function gameCard() {
       console.log('liststtststststst',realList);
     }
   return (
-    <View>
-      <Navbar src = "/game/arrowleft.png" color = 'white' wid = '8vw' from = 'game'></Navbar>
-      {Taro.getStorageSync('key')[0] === 1 && <View className='gameCard-grid'>
-          {realList.map((item,index)=>{
-            item[0]<=9?console.log(item[0]):'';
-            return (
-              <View>
-                {item[0]<=9?<View className='placeholder'></View>:''}
-                {item[0] == '汤'?<View className='placeholder_small'></View>:''}
-                <View>{item}</View>
-              </View>
-            )
-          })}
-      </View>}
-      {Taro.getStorageSync('key')[0] !== 1 && <View className='gameCard-grid'>
-          {realList.map((item,index)=>{
-            if (index < Taro.getStorageSync('key')[1])
-             return (
-              <View>
-                <View className='placeholder'></View>
-                {item[0] == '汤'?<View className='placeholder_small'></View>:''}
-                <View>{item}</View>
-              </View>
-            )
-          })}
-      </View>}
+    <View >
+
+      {/* 导航栏 */}
+      <Navbar src = "/game/title.png" color = '#BCDEFF' wid = '32vw' from = 'game'></Navbar>
+
+      <View className='bg'></View>
+        {/* 按钮部分 */}
+        <View className='gamecardbox'>
+        {Taro.getStorageSync('key')[0] === 1 && <View className='gameCard-grid'>
+            {realList.map((item,index)=>{
+              item[0]<=9?console.log(item[0]):'';
+              return (
+                <View>
+                  {item[0]<=9?<View className='placeholder'></View>:''}
+                  {item[0] == '汤'?<View className='placeholder_small'></View>:''}
+                  <View>{item}</View>
+                </View>
+              )
+            })}
+        </View>}
+        {Taro.getStorageSync('key')[0] !== 1 && <View className='gameCard-grid'>
+            {realList.map((item,index)=>{
+              if (index < Taro.getStorageSync('key')[1])
+              return (
+                <View>
+                  <View className='placeholder'></View>
+                  {item[0] == '汤'?<View className='placeholder_small'></View>:''}
+                  <View>{item}</View>
+                </View>
+              )
+            })}
+        </View>}
+        </View>
+        <View className="gameboxbutton" onClick={()=>{
+          Taro.setClipboardData({
+            data: page,
+            success: function (res) {
+              Taro.getClipboardData({
+                success: function (res) {
+                  Taro.showToast({
+                    title: '复制成功',
+                    icon: 'success',
+                    duration: 2000
+                  })
+                }
+              })
+            }
+          })
+        }}>复制</View>
+        <Image className='gameimage' src={require('../../../image/game/snowman.png')}></Image>
+    
     </View>
+      
+    
+    
+    
   )
 }

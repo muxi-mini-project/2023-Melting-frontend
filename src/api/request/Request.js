@@ -16,7 +16,7 @@ export default async function Request(method,url,Token,body) {
       },
       data: JSON.stringify({
         auth:Taro.getStorageSync('auth'),
-        nick_name:Taro.getStorageSync('nickName')
+        nick_name:Taro.getStorageSync('nickName2')
       }),
     }).then(async function(res) {
       Taro.setStorageSync('token',res.data.data.Token)

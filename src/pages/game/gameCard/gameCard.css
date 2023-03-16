@@ -7,3 +7,32 @@
     width: 100vw;
     height: 8vw;
 }
+.gameCard-grid {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 80vw;
+}
+.gameboxbutton {
+    width: 33.6vw;
+    height: 4vh;
+    border-radius: 20px;
+    position:absolute;
+    background-color: #fff;
+    top: 84vh;
+    left: 33vw;
+    z-index: 250;
+    text-align: center;
+}
+.gamecardbox {
+    margin: auto;
+    margin-top: 60px;
+    width: 84vw;
+    height: 66vh;
+    border-radius: 30px;
+    overflow-y: auto ;
+    /* overflow-x: ; */
+    background-color: #fff;
+}

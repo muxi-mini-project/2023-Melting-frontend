@@ -19,7 +19,11 @@ export default function planinginfo(){
             url:'http://116.204.121.9:65000/api/v1/project',
             data:{info_id:project}
             })
-        res.then(data=>{setresinit(data)})}
+        res.then(data=>{setresinit(data);
+            if(data.department!='部门名称'){           
+            setproject_info(()=>{const newarr=[data.department,data.name,data.aim,data.place,data.time];return newarr})
+        } 
+        })}
       })
     const [project_info,setproject_info]=useState(['','','','','',''])//项目信息上传
     const [resinit,setresinit]=useState([])
