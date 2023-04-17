@@ -44,15 +44,18 @@ export default function gameCard() {
           console.log(res.data.data);
           let pageData = '';
           res.data.data.map((item)=>{
-            if(item.Value == 'info')
-             pageData = item
+            if(item.Key == 'info') {
+              pageData = item.Value
+              console.log(pageData);
+            }
+             
           })
           switch(Taro.getStorageSync(`key`)[0]) {
             case 1: 
               if(Taro.getStorageSync(`key`)[1] === '恐怖')
-               setpage(pageData[1])
+               setpage(pageData[1].Value)
               else
-                setpage(pageData[0])
+                setpage(pageData[0].Value)
               break;
             default: 
               setpage(pageData)
