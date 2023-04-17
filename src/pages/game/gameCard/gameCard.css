@@ -1,4 +1,44 @@
+
+.placeholder {
+    width: 100vw;
+    height: 16vw;
+}
+.placeholder_small {
+    width: 100vw;
+    height: 8vw;
+}
 .gameCard-grid {
-    display: grid;
-    grid-template-columns: 100px 300px 100px 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 80vw;
+}
+.gameboxbutton {
+    width: 33.6vw;
+    height: 4vh;
+    border-radius: 20px;
+    position:absolute;
+    background-color: #fff;
+    top: 84vh;
+    left: 33vw;
+    z-index: 250;
+    text-align: center;
+}
+.gamecardbox {
+    margin: auto;
+    margin-top: 60px;
+    width: 84vw;
+    height: 66vh;
+    border-radius: 30px;
+    overflow-y: auto ;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+.error-alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }

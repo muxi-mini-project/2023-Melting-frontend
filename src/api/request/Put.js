@@ -4,7 +4,7 @@ export default async  function Put(url,Token,body) {
  
     let list = []
       list = await Taro.request({
-          url: 'http://116.204.121.9:65000/api/v1'+url, 
+          url: 'https://www.melting-muxi.xyz:65000/api/v1'+url, 
           method: 'put',
           header: {
             'Authorization': Token?Token:'',

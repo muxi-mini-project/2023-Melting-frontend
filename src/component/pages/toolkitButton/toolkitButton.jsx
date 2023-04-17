@@ -4,7 +4,7 @@ import Taro from '@tarojs/taro'
 import './toolkitButton.css'
 
 export default function ToolkitButton(props) {
-  console.log(props.src);
+//   console.log(props.src);
   return (
    <View className = 'button' onTap={()=>{
       Taro.redirectTo({url:`/pages/toolkit/${props.page}/${props.page}`})

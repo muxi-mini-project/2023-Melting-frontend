@@ -1,0 +1,268 @@
+.page{
+    width: 101vw;
+    height: 94vh;
+    padding-top: 7vh;
+    background-image: url(../../image/introduction/background.png);
+    /* background-size: cover; */
+    position: absolute;
+    top: -1vh;
+    left: -1vw;
+}
+.srollper{
+    width: 100vw;
+    height: 72vh;
+
+}
+.intoDetailbox{
+    width: 100vw;
+    position: absolute;
+    top: 13%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+.textrow{
+    text-align: center;
+    font-size: 27px;
+    color: #fff;
+
+}
+.department{
+    font-size: 30px;
+    color:#fff;
+    padding-left: 100px;
+}
+.departmentInput{
+    display: inline-block;
+    outline-style: none ;
+    border-bottom:1px white dashed ;
+    padding-top: 5px;
+    text-align: center;
+}
+.Srollbox{
+    width: 605px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+.Srollposition1{
+    position: absolute;
+    top:31vh;
+    left: 88px;
+}
+.tagKindbox{
+    width: 100%;
+    height: 68px;
+    display: flex;
+    white-space: nowrap;
+}
+.tagKind{
+    display: inline-block;
+    width: 150px;
+    height: 48px;
+    padding-top: 17px;
+    font-size: 28px;
+    color: #000;
+    text-align:center;
+}
+.tag{
+    height: 50px;
+    border-radius: 15px;
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 500;
+    padding-left: 15px;
+    padding-right:15px ;
+    margin: 10px;
+    background-color: #D3D3D3;
+}
+.tagshowbox{
+    overflow: hidden;
+    height: 85%;
+}
+.tagTipBottom{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 25px;
+}
+.designseeable{
+    color: #fff;
+    position: absolute;
+    bottom: 20%;
+    font-size: 30px;
+    padding-left: 100px;
+}
+.btnleft{
+    width: 263px;
+    height: 115px;
+    position: absolute;
+    bottom: 7%;
+    left: 82px;
+}
+.btnright{
+    width: 263px;
+    height: 115px;
+    position: absolute;
+    bottom: 7%;
+    right:235px;
+}
+.iceright{
+    position: absolute;
+    right:250px;
+    bottom: 8%;
+    width: 40px;
+    height: 40px;
+}
+.bottomlogo{
+    position: absolute;
+    bottom: 3%;
+    left: 314px;
+    width: 156px;
+    height: 46px;
+}
+.tagNumIput{
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    border-bottom:1px dashed #fff;
+}
+.topbox{
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+}
+.topbox1{
+    color:#fff;
+    text-align: center;
+    font-size: 40px;
+}
+.topbox2{
+    color:#fff;
+    text-align: center;
+    font-size: 25px;
+}
+.name{
+    padding-left: 30px;
+    width:350px;
+    display: inline-block;    
+    border-bottom: #fff dashed 1px;
+}
+.yourname{
+    text-align: center;
+    font-size: 35px;
+    color: #fff;
+    margin-bottom: 2vh;
+    padding-top: 2vh;
+}
+.titleSelected{
+    color: #fff;
+    font-size: 36px;
+    margin-left: 175px;
+}
+.selectedTagBox{
+    width: 450px;
+    height: 150px;
+    padding: 10px;
+    background-color: #fff;
+    border: skyblue dashed 7px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+.Srollposition2{
+    position: absolute;
+    left: 89px;
+}
+.btnBox{
+    width: 100vw;
+    height: 15vh;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 10000;
+}
+.othersBox{
+    margin-left: 28px;
+    margin-top: 10px;
+}
+.btnBox>Image{
+    width: 263px;
+    height: 105px;
+
+}
+.personbox{
+    width: 671px;
+    height: 230px;
+    background: #FFFFFF;
+    border-radius: 70px 100px 140px 39px;
+    opacity: 0.7;
+    border: 5px dashed #7DB3E2;
+    display: flex;
+    margin-top: 10px;
+}
+.personbox Image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+.line{
+    width: 3px;
+    height: 179px;
+    opacity: 1;
+    background-color: #7DB3E2;
+    margin-top: 20px;
+}
+.name_description{
+    font-size: 20px;
+    width: 150px;
+    text-align: center;
+}
+.Tags_box_per_big{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.border{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 50px;
+}
+.joininnum{
+    font-family: ShouShuti-Regular, ShouShuti;
+    font-weight: 400;
+    color: #F9F9F9;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+}
+.wordcloudbtn{
+    width: 250px;
+    margin-bottom: 30px;
+}
+.wordcloudbox{
+    width: 101vw;
+    height: 101vh;
+    background-color: #fff;
+    z-index: 1000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.item{
+    display:inline-flex;
+    justify-content:center;
+}
+.refresh{
+    text-decoration: underline;
+    margin-left: 20px;
+}

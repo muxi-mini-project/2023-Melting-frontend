@@ -1,0 +1,149 @@
+.plan-back {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #8983e8; */
+    filter: blur(10px);
+}
+.plan-info-box {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+.plan-backover {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #cccce2;
+    opacity: .6;
+    z-index: -1;
+}
+.plan-backi {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+.plan-box {
+    border: 4px solid #b2aef0;
+    width: 82.5vw;
+    /* min-height: 23.6vh; */
+    background-color: #fff;
+    position: relative;
+    margin-top: 9.6vw;
+}
+.plan-title {
+    font-size: 5.25vw;
+    margin-top: 6.9vw;
+    font-weight: bold;
+}
+.view-button {
+    display: inline-block;
+    text-decoration: underline;
+}
+.view-button :hover {
+    color:blue
+}
+.plan-button {
+    background-color: #fff;
+    background-image: url('../../../image/mine/plan-share.png');
+    background-size: 8vw,8vw;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+.plan-text-box {
+    position: relative;
+    margin-left: 5.5vw;
+    font-size: 4vw;
+   
+}
+.plan-toolkit {
+    display: flex;
+    position: absolute;
+    right: 4vw;
+    top: 6vw;
+}
+.plan-img {
+    width: 8vw;
+    height: 8vw;
+    margin-right: 10px;
+}
+.plan-text {
+    margin-top: 6.25vw;
+}
+.plan-open {
+    margin-top: 3vw;
+    margin-left: 6.9vw;
+    width: 16vw;
+    height: 6vw;
+}
+.plan-backblur {
+    /* filter: blur(30px); */
+    animation: blur .4s ease-in-out forwards;
+}
+@keyframes blur {
+    0% {
+        filter: blur(10px);
+    }
+    100% {
+        filter: blur(0);
+    }
+}
+.plan-user-photo-box {
+    /* display: flex; */
+    position: relative;
+    width: 62vw;
+    overflow: hidden;
+    height: 8vw;
+    align-items: center;
+}
+.plan-user-photo {
+    display: inline-block;
+    position: relative;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    margin-left: 2.5vw;
+    transform: translateY(1.3vw);
+    /* border: 1px solid gray */
+}
+.plan-big-box {
+    display: flex;
+    position: relative;
+}
+.plan-pic {
+    display: inline-block;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+}
+.soon {
+    position: absolute;
+    top: 72%;
+    left:60vw;
+    transform: translateY(-50%);
+    width: 6vw;
+    height: 2vw;
+}
+.plan-shared {
+    width: 9.8vw;
+    height: 4.4vw;
+    position: absolute;
+    right: 6vw;
+    top: 15.6vw;
+}
+.plan-correct {
+    width: 6vw;
+    height: 6vw;
+    position: absolute;
+    right: 18vw;
+    top: 14.6vw;
+}

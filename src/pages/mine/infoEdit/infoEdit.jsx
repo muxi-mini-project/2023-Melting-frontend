@@ -10,9 +10,9 @@ import '../index/index.css'
 
 
 definePageConfig({
-  navigationStyle:"custom"
+  navigationStyle:"custom",
+  disableScroll: true
 })
-
 export default  function Info() {
   const [position, setposition] = useState('')
   let Token = Taro.getStorageSync('token')
@@ -59,14 +59,14 @@ export default  function Info() {
         showToast( '上传中，请稍候','error')
         Taro.request({
           method:'PUT',
-          url: 'http://116.204.121.9:65000/api/v1/users/photo',
+          url: 'https://www.melting-muxi.xyz:65000/api/v1/users/photo',
           header: {
             'content-type': data.contentType,
             'Authorization': Token,
           },
           data: data.buffer,
           success: function (res) {
-            console.log(res)
+            // console.log(res)
             // setsuccess(true)
             if(res.statusCode === 200)
             showToast('修改成功','success')
@@ -86,25 +86,25 @@ export default  function Info() {
       <Navbar src = "/mine/infoEdit.png" color = '' wid = '32vw' from = 'mine'></Navbar>
       <View className='info-background'>
           <View className='info-backhover'></View>
-          <Image src={require('../../../image/mine/back.png')} className = 'info-backcover'></Image> 
+          <Image src={"https://s2.loli.net/2023/03/16/eINlqaMSjbV2RhW.jpg"} className = 'info-backcover'></Image> 
           <View className='info-edit-box'>
 
              {/* 修改头像 */}
              <View className='info-image-box'>
               <Image src={require('../../../image/mine/photo.png')} className='info-class'></Image>
-              <Button onClick={()=>{handleImage()}} className='info-change-image' >
-                    <Image src={'http://'+Taro.getStorageSync("url")} className='info-edit-image'></Image>
-              </Button>
+              <View onClick={()=>{handleImage()}} className='info-change-image' >
+                    <Image src={Taro.getStorageSync('url')?'http://'+Taro.getStorageSync("url"):''} className='info-edit-image'></Image>
+              </View>
              </View>
              
 
              {/* 修改昵称 */}
              <View className='info-image-box'>
                 <Image src={require('../../../image/mine/name.png')} className='info-class'></Image>
-                <Button  className='info-change-nickname'>
-                    <Input value={Taro.getStorageSync('nickName')} onInput={(e)=>{  handleChange(e.detail.value,'') }} 
-                    onBlur={()=>{!text?showToast( '昵称不能超过8个字符哦','error'):showToast('修改成功','success')}}></Input>
-                </Button>
+                <View  className='info-change-nickname'>
+                    <Input style={{textAlign:'center'}} value={Taro.getStorageSync('nickName')} onInput={(e)=>{  handleChange(e.detail.value,'') }} 
+                    onBlur={()=>{!text?showToast( '昵称不能超过8个字符哦','error'):showToast('修改成功','success')}} ></Input>
+                </View>
              </View>
               
               
@@ -112,25 +112,25 @@ export default  function Info() {
             {/* 修改职位 */}
             <View className='info-image-box'>
                 <Image src={require('../../../image/mine/position.png')} className='info-class'></Image>
-                <Button  className='info-change-nickname'>
-                      <Input value={position} onInput={(e)=>{  handleChange('',e.detail.value) }}
+                <View  className='info-change-nickname'>
+                      <Input style={{textAlign:'center'}} value={position} onInput={(e)=>{  handleChange('',e.detail.value) }}
                       onBlur={()=>{!text?showToast( '职位不能超过14个字符哦','error'):showToast('修改成功','success')}}></Input>
-                </Button>
+                </View>
             </View>
             
           </View>
           
           {/* 图片 */}
           <View className='imagecontainer'>
-            <Image className='imageToSwip' src={require('../../../image/mine/img1.png')}></Image>
-            <Image className='imageToSwip' src={require('../../../image/mine/img2.png')}></Image>
+                      <Image className='imageToSwip' src={"https://s2.loli.net/2023/03/16/mUOexVIl1fzsqWh.png"}></Image>
+                      <Image className='imageToSwip' src={"https://s2.loli.net/2023/03/16/KT1CLcE4w5U3aWt.png"}></Image>
           </View>
 
 
           {/* 小冰块 */}
           <View className='icebox'>
-            <Image src = {require('../../../image/mine/icelittle.png')} className = 'icelittle'></Image>
-            <Image src = {require('../../../image/mine/icebig.png')}  className = 'icebig'></Image>
+                <Image src = {"https://s2.loli.net/2023/03/16/SIBdwhOisUWJQzD.png"} className = 'icelittle'></Image>
+                <Image src = {"https://s2.loli.net/2023/03/16/lu9qcSFn631PETO.png"}  className = 'icebig'></Image>
           </View>
       </View>
     </>

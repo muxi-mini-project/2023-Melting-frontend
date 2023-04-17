@@ -5,8 +5,9 @@
     top: 0;
     left: 0;
     background-color: gray;
+    opacity: .6;
     /* animation: appear .4s ease-in-out forwards; */
-    z-index: 40;
+    z-index: 99997;
 }
 
 .alertitem {
@@ -18,9 +19,10 @@
     width:60vw;
     height:40vh;
     border-radius: 40px;
-    z-index: 41;
+    z-index: 99998;
     opacity: 1;
     overflow: auto;
+    overflow-x: hidden;
     /* animation: appear2 .4s ease-in-out forwards; */
 }
 .title-pic {
@@ -30,6 +32,11 @@
     /* width: 100px; */
     margin-top: 80px;
     margin-left: 60px;
+    /* font-size: 30px; */
+}
+.title-text {
+    width: 100px;
+    /* font-size: 26px; */
 }
 .alertshow {
     display: block;
@@ -50,17 +57,19 @@
     /* z-index: 3000; */
 }
 .alertButton {
-    /* background-color: red; */
+    background:url(../../../image/game/correct.png);
+    background-size: 140px 140px;
     position: fixed;
-    top:  2px;
-    right: 6px;
-    width: 60px;
-    height: 60px;
-    z-index: 2000;
+    top:  -40px;
+    right: -50px;
+    width: 160px;
+    height: 160px;
+    z-index: 820000;
     font-size: x-large;
     display: flex;
     justify-content: center;
     margin: auto;
+    /* overflow-x: hidden; */
 }
 .gameselectimg {
     width: 4vw;
@@ -74,21 +83,25 @@
     display: flex;
     justify-content: space-between;
 }
+.gameselectbox-info2 {
+    font-size:8vw;
+    align-items: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
 .boxofchildren-info {
     position: absolute;
     display: flex;
     flex-direction: column;
-    /* visibility: visible; */
-    /* width: 10vh; */
     display: block;
-    /* margin-right: -40px; */
     left: 210px;
     margin-top: 80px;
 }
-.boxofchildrenalt-info {
-    /* visibility: hidden; */
-    /* width: 10vh; */
-    display: none;
+.gamebox-alert {
+    width: 60vw;
+    margin-top: 30vw;
+    margin-left: 2vw;
 }
 .headtit-info {
   display: flex;

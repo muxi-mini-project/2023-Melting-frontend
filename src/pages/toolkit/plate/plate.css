@@ -1,6 +1,60 @@
+#platebackimg {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 24vh;
+    /* opacity: ; */
+}
+#plateback {
+    position: absolute;
+    top: 10vh;
+    height: 90vh;
+    width: 100vw;
+    background-color: #c6c7f8;
+    /* display: flex;
+    justify-content: center; */
+}
 .turntable {
     position: absolute;
-    top: 50%;
+    top: 26%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-40vw,-40vw);
+}
+.plate-button {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    bottom: 28vh;
+    margin: auto;
+}
+.pointer-pic {
+    width: 30vw;
+    height: 12vw;
+}
+.rotateplate {
+    width: 80vw;
+    height: 80vw;
+}
+.rotate {
+    animation: rotate .1s linear forwards infinite;
+}
+.pointer-image {
+    position: absolute;
+    top: 12%;
+    left: 48.5%;
+    width: 3vw;
+    height: 30vw;
+    transform: translate(-3vw,-26vw);
+    /* transform: translate(-50%, -50%); */
+    z-index: 200;
+}
+@keyframes rotate {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+
 }

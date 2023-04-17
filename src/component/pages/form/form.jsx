@@ -1,6 +1,3 @@
-/**
- * 一个将 items 往下推到正确位置的空元素
- */
 import { useState } from 'react';
 import { flushSync } from 'react-dom';
 import React from 'react';
@@ -8,9 +5,9 @@ import { View, Image } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import Games from '../games/games';
 import Request from '../../../api/request/Request';
-import { useLoad } from '@tarojs/taro';
+import { useDidShow } from '@tarojs/taro';
 
-function FixedSizeList({ containerHeight, itemHeight, itemCount, list }) {
+function FixedSizeList({ containerHeight, itemHeight, itemCount, list, project_id }) {
   
 
   const contentHeight = itemHeight * itemCount; // 内容高度
@@ -20,7 +17,7 @@ function FixedSizeList({ containerHeight, itemHeight, itemCount, list }) {
   // 继续需要渲染的 item 索引有哪些
   let startIdx = Math.floor(scrollTop / itemHeight);
   let endIdx = Math.floor((scrollTop + containerHeight) / itemHeight);
-
+  // console.log('query',renderList);
   // 上下额外多渲染几个 item，解决滚动时来不及加载元素出现短暂的空白区域的问题
   const paddingCount = 2;
   startIdx = Math.max(startIdx - paddingCount, 0); // 处理越界情况
@@ -31,7 +28,8 @@ function FixedSizeList({ containerHeight, itemHeight, itemCount, list }) {
   // 需要渲染的 items
   const items = [];
 
-  useLoad(
+  useDidShow(
+    
     async function query() {
       const li = await Request('post','/project/games/find',Taro.getStorageSync('token'),{
         "crowd": `${list[0]}`,
@@ -39,13 +37,15 @@ function FixedSizeList({ containerHeight, itemHeight, itemCount, list }) {
         "venue": `${list[2]}`,
        
       })
-      setrenderList(['1','2','3'])
+     
+      setrenderList(li.data.data)
       return li
     }
   )
   
   renderList?renderList.map((item,index)=>{
-    items.push(<Games clickable = {true} key={index} index={index} name= {item.name}></Games>)
+    // if(index>startIdx && index<endIdx)
+    items.push(<Games project_id = {project_id} key={index} index={index} issshow = {false} name ={item.gamename} class = {'经典游戏'} tools = {'有手就行'} rules = '敬请期待' clickable = {true} number = {item.crowd} time = {item.time} place = {item.venue} id = {item.gameid}></Games>)
   }):''
 
   return (

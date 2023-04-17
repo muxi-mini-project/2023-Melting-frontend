@@ -1,6 +1,0 @@
-{
-    "navigationBarTitleText": "红包雨",
-    "usingComponents": {
-        "sol-packet-rain": "/dist/packet-rain/index"
-    }
-}

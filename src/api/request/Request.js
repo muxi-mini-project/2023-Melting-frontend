@@ -1,44 +1,47 @@
 import React from 'react'
 import Taro from '@tarojs/taro'
-// import FormData from 'form-data'
+
 
 export default async function Request(method,url,Token,body) {
-  
+ 
   let dataList = []
-  
-  const login = () => {
+  const login = (auth,nickName) => {
     Taro.request({
-      url: 'http://116.204.121.9:65000/api/v1/login', 
+      url: 'https://www.melting-muxi.xyz:65000/api/v1/login', 
       method: method,
       header: {
         'Authorization': '',
         'Content-Type': 'application/json',
         'Accept': '*/*',
       },
-      data: JSON.stringify(body),
-      success: function (res) {
-        console.log(res);
-      },
-      fail: function (err) {
-        console.log(err);
-      }
+      data: JSON.stringify({
+        auth:Taro.getStorageSync('auth'),
+        nick_name:Taro.getStorageSync('nickName2')
+      }),
+    }).then(async function(res) {
+      Taro.setStorageSync('token',res.data.data.Token)
+      return dataList
     })
   }
+
   const register = () => {
+    body.photo = Taro.getStorageSync('qqurl')
     Taro.request({
-      url: 'http://116.204.121.9:65000/api/v1/register', 
+      url: 'https://www.melting-muxi.xyz:65000/api/v1/register', 
       method: method,
       header: {
         'Authorization': '',
         'Content-Type': 'application/json',
         'Accept': '*/*',
       },
+      // data: JSON.stringify(body),
       data: JSON.stringify(body),
       success: function (res) {
        login()
       }
     })
   }
+
   if(url === '/login' && (!body.auth || !body.nick_name))
   {
     return 0
@@ -52,7 +55,7 @@ export default async function Request(method,url,Token,body) {
     } 
     else {
       dataList = await Taro.request({
-          url: 'http://116.204.121.9:65000/api/v1'+url, 
+          url: 'https://www.melting-muxi.xyz:65000/api/v1'+url, 
           method: method,
           header: {
             'Authorization': Token?Token:'',
@@ -61,21 +64,33 @@ export default async function Request(method,url,Token,body) {
           },
           data: JSON.stringify(body),
           
-        }).then((res) => {
+        }).then(async function (res) {
           if(url === '/login' ) {
             if(res.statusCode !== 401) {
               Taro.setStorageSync('token',res.data.data.Token)
               dataList = [res.data.data]
+              
             } else {
               register()
             }    
-           } else {
-            Taro.setStorageSync('nickName',res.data.data.qq)
-            Taro.setStorageSync('url',res.data.data.photo)
+           } else if(res.statusCode === 403) {
+            console.log('relogin');
+            login()
+            Taro.showToast({
+              title: '请退出重进刷新',
+              icon: 'error',
+              duration: 3000
+            })
+           }
+           else {
+              
+            res.data.data.qq?Taro.setStorageSync('nickName',res.data.data.qq):''
+            res.data.data.qq?Taro.setStorageSync('url',res.data.data.photo):""
             return res
            }
           
         })
     }
+    // console.log('dataList',dataList);
     return dataList
 }

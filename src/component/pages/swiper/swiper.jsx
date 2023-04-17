@@ -3,6 +3,7 @@ import { ScrollView , View} from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import './swiper.css'
 import { useEffect } from 'react'
+import Put from '../../../api/request/Put'
  
 export default function Swiper(props) {
     const [state, setState] = useState({
@@ -11,7 +12,9 @@ export default function Swiper(props) {
         startY: 0,
         show: true,
       })
-     
+      let list = Taro.getStorageSync('gamesnames')
+    const [deletable, setdelete] = useState(false)
+    const [gamenamelist, setgamenamelist] = useState([])
 
 
       const angle = (start, end) => {
@@ -38,52 +41,49 @@ export default function Swiper(props) {
       { X: startX, Y: startY },
       { X: touchMoveX, Y: touchMoveY }
     )
-    console.log(angles);
     
     if (Math.abs(angles) > 30) return
    
     if (touchMoveX > startX) {
-      console.log('右滑')
-      
       const _animation = Taro.createAnimation({
-        duration: 400,
-        timingFunction: 'linear',
-        delay: 100,
+        duration: 300,
+        timingFunction: 'ease-in-out',
+        delay: 0,
         transformOrigin: 'left top 0',
-        success: function (res) {
-          console.log('chenggong')
-        },
       })
  
       _animation.translateX(0).step()
       setState(previousState => {
         return { ...previousState, animation: _animation.export(), }
       })
+      setdelete(false)
     } else if (touchMoveX - startX < -10) {
       
-      console.log('左滑')
-      
       const _animation = Taro.createAnimation({
-        duration: 400,
-        timingFunction: 'linear',
-        delay: 100,
+        duration: 300,
+        timingFunction: 'ease-in-out',
+        delay: 0,
         transformOrigin: 'left top 0',
-        success: function (res) {
-          console.log(res)
-        },
       })
       
       _animation.translateX(-80).step()
       setState(previousState => {
         return { ...previousState, animation: _animation.export(), }
       })
+      setdelete(true)
      
     }
   }
  
   const handleClick = () => {
-   
+    
+        list = list.replace(props.id,"")
+        // console.log('listlist',list);
+        Taro.setStorageSync('gamesnames',list)
+        Put(`/project?id=${props.project_id}`,Taro.getStorageSync('token'),{game:`${list}`})
+        
       setState(previousState => {
+       
         return { ...previousState, show:false, }
     })
    
@@ -95,27 +95,17 @@ export default function Swiper(props) {
     return (
         <View style={state.show?{display:'block'}:{display:'none'}} className='playbox'>
             <View className='history' >
-                
-                <View className='historyItem' >
-                      
-                      <View className='text' onClick={()=>{
-                           handleClick()
-                    }}>删除</View>
-                      
-                    
-                        {/* 删除 */}
-                        <View className='itemDelete right'></View>
-            {/* {props.children} */}
-                    {/* 遮盖层 */}
-                    <View
-                        // className='itemCover'
-                        onTouchStart={touchstart}
-                        onTouchEnd={touchmove}
-                        animation={props.moveable?state.animation:''}
-                    >
-                        {props.children}
-                    </View>
+              {deletable?<View className='text' onClick={()=>{handleClick()}}>{'点我删除'}</View>:''}
+              <View className='historyItem' >
+                {/* <View className='itemDelete right' onClick={()=>{props.moveable?handleClick():''}}></View> */}
+                <View
+                  className='itemCover'
+                  onTouchStart={touchstart}
+                  onTouchEnd={touchmove}
+                  animation={props.moveable?state.animation:''}>
+                  {props.children}
                 </View>
+              </View>
             </View>
         </View>
       

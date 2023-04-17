@@ -1,0 +1,141 @@
+.drawer_screen{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 2000;
+    opacity: 0.5;
+}
+.Infomainbox{
+    position: fixed;
+    top: 25vh;
+    left: 104px;
+    z-index: 10000;
+}
+.InfoContentBox{
+    width: 553px;
+    min-height: 550px;
+    padding-left: 52px;
+    padding-right: 32px;
+    padding-top: 70px;
+    box-sizing:border-box;
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+.InfoContentTitile{
+    font-size: 40px;
+    font-family: Microsoft YaHei-Bold, Microsoft YaHei;
+    font-weight: 700;
+    position: absolute;
+    left: 40px;
+    top: 30px;
+}
+.closeicon{
+    width: 51px;
+    height: 51px;
+    position: absolute;
+    right: 47px;
+    top: 40px;
+}
+.InfoContent{
+    font-size: 32px;
+    width: 442px;
+    min-height: 296px;
+}
+.changeicon{
+    margin-left: 400px;
+    margin-bottom: 5px;
+    width: 53px;
+    height: 39px;
+    position: absolute;
+    bottom: 130px;
+    right: 40px;
+}
+.copybtn{
+    margin-top: 20px;
+    width: 228px;
+    height: 95px;
+    background: #FFFFFF;
+    border-radius: 21px 21px 21px 21px;
+    z-index: 10000;
+    display: block;
+}
+.tipbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.tipimgbox{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1200px;
+    padding-top: 10%;
+    justify-content: space-between;
+    align-items: center;
+}
+.tipimgbox>Image{
+    width: 626px;
+    height: 496px;
+    z-index: 10001;
+}
+.tipClose{
+    z-index: 110001;
+}
+.modeldetailbox{
+    z-index: 10000;
+    width: 619px;
+    height: 80vh;
+    padding-left: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 11px 2px rgba(0,0,0,0.16);
+    border-radius: 28px 28px 28px 28px; 
+    position: absolute;
+    left: 40px;
+    top:150px;
+    display: flex;
+    flex-direction: column;
+}
+.topOk{
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    width: 73px;
+    height: 73px;
+    z-index: 110005;
+}
+.modeltitile2{
+    font-size: 56px;
+    font-family: ShouShuti-Regular, ShouShuti;
+    font-weight: 400;
+    color: #2C2C2C;
+    padding-top: 33px;
+    height: 60px;
+    width: 300px;
+    border-bottom: black dashed 1px;
+}
+.todocontent{
+    width: 530px;
+    height: 7vh;
+    padding: 20px;
+    border:black dashed 2px;
+    border-radius: 20px;
+}
+.modeltip2{
+    font-size: 28px;
+    font-weight: 200;
+    padding-top: 10px;
+}
+.modeldetailbox Textarea{
+    font-size: 25px;
+}
+.modeldetailbox input{
+    color: #2C2C2C;
+    font-weight: 800;
+    width: 250px;
+}

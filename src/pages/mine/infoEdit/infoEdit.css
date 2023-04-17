@@ -3,6 +3,7 @@
     height: 90vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 .info-backhover {
     width: 100vw;
@@ -45,6 +46,7 @@
     width: 6vh;
     left: -14vw;
     top: 50%;
+    margin-right: 40vw;
     transform: translateY(-50%);
 }
 .info-edit-box {
@@ -60,8 +62,12 @@
     box-shadow: 10px 10px 10px -8px rgba(0, 0, 0, .2);
     width: 35.2vw;
     height: 14vw;
+    background-color: white;
+    border-radius: 3vw;
     margin-bottom: 2vh;
+    margin-left: 30vw;
 }
+
 .info-change-image {
     position: relative;
     border-radius: 40px;
@@ -71,6 +77,8 @@
     box-shadow: 10px 10px 10px -8px rgba(0, 0, 0, .2);
     overflow: hidden;
     margin-bottom: 2vh;
+    margin-left: 38vw;
+    background-color: #fff;
 }
 .info-edit-tip {
     position: absolute;

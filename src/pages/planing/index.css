@@ -1,0 +1,171 @@
+.planpage{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(217,223,253,0.91);
+}
+
+.mainbox{
+    padding-top: 20px;
+    height: 75vh;
+    display: flex;
+    justify-content: space-around;
+}
+.mainbox Input{
+    z-index: 1;
+}
+.infoTextBox{
+    width: 100vw;
+    height: 33vh;
+    display: flex;
+    flex-direction: column;
+}
+.infoTitle{
+    height: 60px;
+    font-size: 39px;
+    font-family: ShouShuti-Regular, ShouShuti;
+    font-weight: 400;
+    color: #707070;
+    padding-left: 65px;
+}
+.infoTitle Button{
+    margin-left: 20px;
+    width: 126px;
+    height: 44px;
+    font-size: 28px;
+    font-family:Microsoft YaHei-Regular, Microsoft YaHei;
+    background: #FFFFFF;
+    border-radius: 14px 14px 14px 14px;
+}
+.infoText{
+    flex: 1;
+    font-size: 28px;
+    font-family: Microsoft YaHei-Regular, Microsoft YaHei;
+    font-weight: 400;
+    color: #4B4B4B;
+    padding-left: 102px; 
+}
+.infoTextAdd{
+    padding-left:154px ;
+}
+.infoText Input{
+    display: inline-block;
+    margin-left: 40px;
+    width: 261px;
+    overflow: visible;
+    outline-style: none ;
+    border-bottom:1px solid #707070 ;
+    text-align: center;
+}
+Button{
+    display: inline;
+}
+.tipbox{
+    position: absolute;
+    bottom: 56px;
+    left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.tipTitle{
+    width: 193px;
+    height: 39px;
+    font-size: 39px;
+    font-family: ShouShuti-Regular, ShouShuti;
+    font-weight: 400;
+    color: #4B4B4B;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+.tip{
+    width: 421px;
+    height: 28px;
+    font-size: 28px;
+    font-family: ShouShuti-Regular, ShouShuti;
+    font-weight: 400;
+    color: #4B4B4B;
+}
+.tip_detail{
+    position: absolute;
+    top:0;
+    left: 220px;
+    width: 60px;
+    height: 79px;
+}
+.okFinish{
+    width: 145px;
+    height: 156px;
+    position: absolute;
+    bottom: 0;
+    right: 4px;
+}
+.mainbox{
+    position: absolute;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.modelsroll{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 10px;
+
+}
+.infomodel{
+    width: 202px;
+    height: 300px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 11px 2px rgba(0,0,0,0.16);
+    border-radius: 28px 28px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+.modeltitle{
+    font-size: 30px;
+}
+.modeltip{
+    font-size: 23px;
+}
+.budgetbox{
+    padding-top: 20px;
+}
+.bugetadd{
+    padding-left: 50px;
+    font-size: 30px;
+}
+.bugetkindbox{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+.budgetkind>Input{
+    display:inline-block;
+    width: 170px;
+    margin-left: 20px;  
+    margin-right: 30px;  
+    border-bottom: #4B4B4B 1px solid;
+    text-align: center;
+}
+.budgetkind{
+    font-weight: 300;
+    font-size: 28px;
+}
+.infotext Text{
+    text-decoration: underline;
+}
+.felxwrap{
+    display: flex;
+    flex-direction: column;
+}
+.backicon{
+    width: 300px;
+}
+.hieght{
+    z-index: 100000;
+}

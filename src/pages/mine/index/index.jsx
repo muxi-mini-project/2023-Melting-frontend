@@ -8,7 +8,8 @@ import Request from '../../../api/request/Request'
 import Taro, {useDidShow, useLoad} from '@tarojs/taro'
 
 definePageConfig({
-  navigationStyle:"custom"
+  navigationStyle:"custom",
+  disableScroll: true
 })
 
 export default function Mineindex() {
@@ -26,13 +27,19 @@ export default function Mineindex() {
   async function Req() {
     await Request('get','/users',Token,)
       gameList = await InfoData()
-      console.log(gameList);
+      // console.log(gameList);
       setnickName( gameList.data.data.qq)
       setposition(gameList.data.data.position)
       seturl(gameList.data.data.photo) 
   } 
  
   useDidShow (()=>{
+    let pages = Taro.getCurrentPages();
+    let currPage = pages[pages.length - 1]; // 获取当前页面
+    if (currPage.__data__.holder) { // 获取值
+      // this.setState({ holder: currPage.__data__.holder })
+      // console.log(currPage.__data__.holder);
+    } 
     if(!Token) {
       timer = setInterval(() => {
          Token = Taro.getStorageSync('token')
@@ -56,17 +63,16 @@ export default function Mineindex() {
             <View className={!Token?'background':'background backblur'} >
             <Navbar src = "/mine/title.png" color = '' wid = '22vw'></Navbar>
               <View className='backover'></View>
-              <Image src={require('../../../image/mine/back.png')} className = 'backi'></Image>
+              <Image src={"https://s2.loli.net/2023/03/16/eINlqaMSjbV2RhW.jpg"} className = 'backi'></Image>
               
               {/* 信息栏 */}
               <View id='infoBox'>
-                {<Image src={url?'http://'+url:require('../../../image/mine/back.png')} className='image'></Image>}
+                {<Image src={url?'http://'+url:''} className='image'></Image>}
                 <View id='textBox'>
                   <Text className='id'>{nickName}</Text>
                   <Text className='detail'>{position}</Text>
                 </View>
               </View>
-
                   {/* 选项卡部分 */}
                     <View id='navigatebar'>
                       <MineButton page = 'infoEdit' name = '编辑资料'></MineButton>
@@ -76,16 +82,16 @@ export default function Mineindex() {
 
                     {/* 图片部分 */}
                     <View className='imagecontainer'>
-                      <Image className='imageToSwip' src={require('../../../image/mine/img1.png')}></Image>
-                      <Image className='imageToSwip' src={require('../../../image/mine/img2.png')}></Image>
+                      <Image className='imageToSwip' src={"https://s2.loli.net/2023/03/16/mUOexVIl1fzsqWh.png"}></Image>
+                      <Image className='imageToSwip' src={"https://s2.loli.net/2023/03/16/KT1CLcE4w5U3aWt.png"}></Image>
                     </View>
 
               {/* </View> */}
             
               {/* 小冰块 */}
               <View className='icebox'>
-                <Image src = {require('../../../image/mine/icelittle.png')} className = 'icelittle'></Image>
-                <Image src = {require('../../../image/mine/icebig.png')}  className = 'icebig'></Image>
+                <Image src = {"https://s2.loli.net/2023/03/16/SIBdwhOisUWJQzD.png"} className = 'icelittle'></Image>
+                <Image src = {"https://s2.loli.net/2023/03/16/lu9qcSFn631PETO.png"}  className = 'icebig'></Image>
               </View>
               
             </View>

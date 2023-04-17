@@ -1,0 +1,140 @@
+.index{
+    width: 100vw;
+    height: 100vh;
+    background: #A8B5E5;
+    position: relative;
+}
+.disable {
+    position: absolute;
+    top: 0;
+    width: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    z-index: 1008;
+}
+.topTittle{
+    position: absolute;
+    top: 56px;
+    left: 32px;
+    width: 254px;
+    height: 42px;
+    font-size: 42px;
+    font-family: SimHei-Regular, SimHei;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.clickStart{
+    width: 620px;
+    font-size: 77px;
+    font-family: ShouShuti-Regular, ShouShuti;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+}
+.producer{
+    width: 350px;
+    height: 39px;
+    font-size: 39px;
+    font-family: ShouShuti-Regular, ShouShuti;
+    font-weight: 400;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 42px;
+    left: 221px;
+}
+.ice_start{
+    position: absolute;
+    top: 39vh;
+    left: 0;
+    width: 100vw;
+}
+.container{
+    position: absolute;
+    top:17vh;
+    left:128px;
+    width: 496px;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.choice{
+    width: 496px;
+    height: 150px;
+    font-size: 44px;
+    position: relative;
+    padding-top: 90px;
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: 4px 5px 11px 2px rgba(0,0,0,0.16);
+    border-radius: 70px 70px 70px 70px;
+}
+.choice>Image{
+    width: 77px;
+    height: 53px;
+    position: absolute;
+    bottom: 0;
+    right: -15px;
+}
+.NewcreatePage{
+    width: 100vw;
+    height: 100vh;
+    background-color: #728FB9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.createbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.createTip{
+    font-size: 40px;
+    font-weight: 400;
+    color: #FFFFFF;
+    padding-bottom: 40px;
+}
+.createMsg{
+    display: inline-block;
+    border-bottom: #FFFFFF solid 1px;
+    width: 250px;
+}
+.startplan{
+    width: 314px;
+    height: 102px;
+    margin-top: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 11px 2px rgba(0,0,0,0.16);
+    border-radius: 37px 37px 37px 37px;
+    overflow: visible;
+}
+.begin_ice{
+    width: 47px;
+    height: 32px;
+    position: absolute;
+    bottom: -2px;
+    right: -5px;
+}
+.gamebackground {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    filter: blur(10px);
+}
+.backblur {
+    /* filter: blur(30px); */
+    animation: blur .4s ease-in-out forwards;
+}
+@keyframes blur {
+    0% {
+        filter: blur(10px);
+    }
+    100% {
+        filter: blur(0);
+    }
+}

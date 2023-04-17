@@ -23,7 +23,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #f2e7bb;
+    background-color: #BCDEFF;
     /* opacity: .6; */
     z-index: -1;
 }
@@ -31,9 +31,9 @@
     position: absolute;
     bottom: 0;
     width: 100vw;
-    height: 26vh;
+    height: 22vh;
     /* opacity: .5; */
-    z-index: 23;
+    z-index: 244;
 }
 #filt {
     margin-top: 4.1vw;
@@ -41,19 +41,20 @@
     justify-content: space-around;
 }
 .ti {
-    margin-top: 8.3vw;
+    margin-top: 1.3vw;
     font-size: 4.6vw;
     margin-left: 6.2vw;
 }
+.ti-alert {
+    margin-top: 1vw;
+    font-size: 3.8vw;
+    margin-left: 6.2vw;
+    /* color: #fff; */
+}
 #selebox {
-    height: 55vh;
+    height: 52vh;
     overflow: auto;
 }
-/* .authorize {
-    width: 200px;
-    height: 200px;
-    background-color: red;
-} */
 .click {
     background-color: red;
     width: 200px;
@@ -62,4 +63,23 @@
     position: absolute;
     top: 400px;
     left: 200px;
+}
+.gameselectboxshadow {
+    position: relative;
+    width: 81.2vw;
+    border-radius: 30px;
+    background-color: #fff;
+    font-family: 'Arial','Microsoft YaHei',sans-serif;
+    margin: 0 auto;
+    margin-top: 1.3vw;
+    box-shadow: 10px 10px 10px -8px rgba(0, 0, 0, .2);
+    z-index: 200;
+    min-height: 12.2vh;
+}
+.gameselectalert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
 }

@@ -1,8 +1,0 @@
-<!-- pages/packet-rain/index.wxml -->
-<view class="container">
-  <image mode="aspectFit" src="https://gitee.com/sunniejs/sol-weapp/raw/master/logo.png"></image>
-  <view class='title'>Sol Weapp</view>
-  <view>红包雨</view>
-</view>
-<!-- 红包雨组件 -->
-<sol-packet-rain visible="{{visible}}" createSpeed="{{createSpeed}}" time="{{time}}" readyTime="{{readyTime}}" min="{{min}}" max="{{max}}" bind:finish="success"></sol-packet-rain>
