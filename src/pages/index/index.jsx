@@ -33,7 +33,7 @@ const  jump=()=>{
   
     return (
         <>
-        {!token && <View className='disable'>{!token && <Login></Login>} </View>}
+        {!token && <View className='disable'>{!token && <Login first={true}></Login>} </View>}
         
       <View className={!token?'gamebackground':'gamebackground backblur'}>
           

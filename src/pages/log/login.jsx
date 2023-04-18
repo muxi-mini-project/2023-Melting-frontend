@@ -6,7 +6,7 @@ import { useState } from 'react'
 import './login.css'
 import Put from '../../api/request/Put'
 
-export default function Login() {
+export default function Login(props) {
     const [userInfo, setuserInfo] = useState([])
     const [change, setchange] = useState('一键授权登录')
     const [animation, setanimation] = useState('')
@@ -41,7 +41,12 @@ export default function Login() {
     <View className='loginBox'>
           <View className='poptext'>{(realName)?`登录成功，欢迎你,${realName}`:'小程序授权确认'}</View>
           <View className='popalert'>请授权登陆后，再进行操作</View>
-              <View className='popbutton'>
+              <View className='popbutton' >
+               {props.first && <View>
+                  <Button id='popdeny' onClick={()=>{
+                    Taro.navigateTo({url:'/pages/preparation/index'})
+                  }}>{"拒绝登录"}</Button>
+                </View>}
                 <View >
                     <Button   
                           id="popauthorize"

@@ -31,7 +31,7 @@ export default function Games(props) {
   return (
 
     <>
-    <Swiper moveable = {click} project_id = {props.project_id} gamenamelist = {gamenamelist} id = {props.id} gamename = {props.name} >
+    <Swiper moveable = {!click} project_id = {props.project_id} gamenamelist = {gamenamelist} id = {props.id} gamename = {props.name} >
       <View className='gameInfoBox' onClick={()=>{
         Taro.setStorageSync('key',[props.id,'','',''])
         if(click) {

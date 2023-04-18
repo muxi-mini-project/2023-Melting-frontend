@@ -58,7 +58,7 @@
     margin-bottom: 4vh;
     
 }
-#popauthorize {
+#popdeny,#popauthorize {
     display: flex;
     justify-content: center;
     align-items: center;

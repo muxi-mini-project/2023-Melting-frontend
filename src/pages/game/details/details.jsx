@@ -82,7 +82,7 @@ export default function detail(props) {
             number = {item.crowd} 
             time = {item.time} 
             place = {item.venue}   
-            clickable= {true} 
+            clickable= {false} 
             issshow={true} 
             id = {item.gameid}/>
           )
